@@ -157,9 +157,9 @@ TITLE
               break
             end
           end
-        rescue
+        rescue => e
+          puts e.inspect
           puts _("Error parsing %{path}") % {:path => path}
-          raise
         end
       end
       pomessages
